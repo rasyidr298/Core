@@ -8,8 +8,8 @@
 import Foundation
 
 // MARK: extension String
-extension String {
-  func toDate(withFormat format: String = "yyyy-MM-dd") -> Date {
+public extension String {
+    func toDate(withFormat format: String = "yyyy-MM-dd") -> Date {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
     guard let date = dateFormatter.date(from: self) else {
@@ -20,8 +20,8 @@ extension String {
 }
 
 // MARK: extension Date
-extension Date {
-  func toString(format: String = "yyyy-MM-dd") -> String {
+public extension Date {
+    func toString(format: String = "yyyy-MM-dd") -> String {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.dateFormat = format
