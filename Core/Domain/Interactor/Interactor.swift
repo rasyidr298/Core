@@ -12,7 +12,7 @@ public struct Interactor<Request, Response, R: Repository>: UseCaseType where R.
 
     private let repository: R
 
-    public init(_ repository: R) {
+    public init(repository: R) {
         self.repository = repository
     }
 
